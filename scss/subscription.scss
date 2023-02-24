@@ -1,0 +1,33 @@
+.subscription{
+    border-top: 1px solid $darkBlue;
+    &__text{
+        padding: 70px 0;
+        max-width: 911px;
+        margin: 0 auto;
+        text-align: center;
+        @media (max-width: 1200px){
+            padding: 60px 0;
+        }
+        @media (max-width: 780px){
+            padding: 45px 0;
+            font-size: 30px;
+        }
+        @media (max-width: 400px){
+            padding: 30px 0;
+            font-size: 23px;
+        }
+        a{
+            color: $orange;
+            transition: all 0.3s cubic-bezier(0.46, 0.03, 0.52, 0.96) 0s;
+            @media (any-hover: hover) {
+                &:hover{
+                    color: $green;
+                }
+            }
+        }
+        span{
+            font-style: italic;
+            font-weight: 300;
+        }
+    }
+}

@@ -1,0 +1,162 @@
+// Colors
+$tan: #FCF9F2;
+$darkBlue: #01152F;
+$orange: #E38C00;
+$pink: #EECFC5;
+$green: #98AF77;
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    line-height: 158%;
+    font-weight: 400;
+    color: $darkBlue;
+    background-color: #fff;
+
+    @media (max-width: 1600px) {
+        font-size: 17px;
+    }
+}
+
+body._lock {
+    overflow: hidden;
+    // height: 100%;
+    // width: 100%;
+    // position: absolute;
+}
+
+._container {
+    max-width: 1442px;
+    padding: 0 31px;
+    margin: 0 auto;
+
+    @media (max-width: 767px) {
+        padding: 0px;
+    }
+}
+
+._innerСontainer {
+    padding: 0 40px;
+
+    @media(max-width: 767px) {
+        padding: 0 20px;
+    }
+
+    @media(max-width: 400px) {
+        padding: 0 10px;
+    }
+}
+
+main {
+    position: relative;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.content {
+    border: 1px solid $darkBlue;
+    background-color: $tan;
+}
+
+.subtitle {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: $darkBlue;
+    padding-left: 15px;
+    margin-bottom: 14px;
+
+    @media (max-width: 1600px) {
+        padding-left: 3px;
+    }
+}
+
+.title {
+    font-size: 49px;
+    line-height: 120%;
+    color: #05142D;
+
+    @media (max-width: 1600px) {
+        font-size: 37px;
+    }
+
+    @media (max-width: 990px) {
+        font-size: calc(32px + (37 - 32) * ((100vw - 320px) / (890 - 320)));
+    }
+}
+
+%titleBeforeText {
+    margin-bottom: 24px;
+}
+
+%titleBeforeBtn {
+    margin-bottom: 34px;
+}
+
+@media (max-width: 800px) {
+    %titleBeforeBtn {
+        margin-bottom: 24px;
+    }
+}
+
+.btn {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: $darkBlue;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 110px;
+    padding-right: 110px;
+    border-radius: 30px;
+    transition: all 0.3s cubic-bezier(0.46, 0.03, 0.52, 0.96) 0s;
+
+    @media (max-width: 1600px) {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    @media (max-width: 1200px) {
+        font-size: 13px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+}
+
+.btn_orange {
+    background-color: $orange;
+
+    @media(any-hover: hover) {
+        &:hover {
+            background-color: $green;
+        }
+    }
+}
+
+.btn_no-bg {
+    border: 1px solid $darkBlue;
+
+    @media(any-hover: hover) {
+        &:hover {
+            background-color: $darkBlue;
+            color: #fff;
+        }
+    }
+}

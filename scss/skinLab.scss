@@ -1,0 +1,118 @@
+.skinLab {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    @media (max-width: 1600px){
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    @media (max-width: 1200px){
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    &__top {
+        text-align: center; 
+    }
+
+
+    &__subtitle {
+    }
+
+    &__title {
+        @extend %titleBeforeBtn;
+    }
+
+    &__button {
+    }
+
+    &__cards {
+        margin-top: 100px;
+        display: grid;
+        grid-template-columns: 330px 330px 330px;
+        column-gap: 4%;
+        row-gap: 60px;
+        justify-content: center;
+        @media (max-width: 1600px){
+            row-gap: 40px;
+            margin-top: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 240px));
+        }
+        @media (max-width: 780px){
+            row-gap: 33px;
+        }
+        @media (max-width: 570px){
+            grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+        }
+    }
+}
+
+.skinLabCard {
+
+    &__image{
+        position: relative;
+        display: block;
+        height: 440px;
+        border: 1px solid $darkBlue;
+        border-radius: 73px;
+        overflow: hidden;
+        @media (max-width: 1600px){
+            height: 340px;
+        }
+        @media (max-width: 570px){
+            border: none;
+            border-radius: 0px;
+        }
+        &:before{
+            content: '';
+            display: block;
+            position: absolute;
+            background-color: #fff; 
+            opacity: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            transition: all .3s ease-out 0s;
+        }
+        @media (any-hover: hover) {
+            &:hover{
+                &::before{
+                    opacity: 0.2;
+               }
+            }
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__description {
+        margin: 30px auto 0;
+        max-width: 260px;
+        @media (max-width: 1600px){
+            margin-top: 20px;
+        }
+    }
+
+    &__subtitle {
+        font-size: 14px;
+        line-height: 18px;
+        text-align: center;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+        color: $darkBlue;
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        font-size: 23px;
+        line-height: 122%;
+        text-align: center;
+        color: #05142D;
+        @media (max-width: 1600px){
+            font-size: 20px;
+        }
+    }
+}

@@ -1,0 +1,143 @@
+.reviews {
+    padding: 70px 0 100px;
+    border-top: 1px solid #05142D;
+    overflow: hidden;
+
+    @media (max-width: 767px) {
+        padding: 60px 0 40px;
+    }
+
+    &__top {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &__subtitle {}
+
+    &__title {
+        font-weight: 300;
+        @extend %titleBeforeBtn;
+    }
+
+    &__swiperContainer {
+        margin-top: 80px;
+
+        @media (max-width: 800px) {
+            margin-top: 60px;
+        }
+
+        @media (max-width: 500px) {
+            margin-top: 50px;
+        }
+    }
+
+    &__cards {}
+
+    &__swiperSlide {}
+
+    &__card {}
+
+}
+
+.reviews-card {
+    width: 100%;
+    border-radius: 40px;
+    background-color: #fff;
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 570px) {
+        border-radius: 0px;
+        padding: 30px;
+    }
+
+    &__top {
+        flex: 1 1 auto;
+    }
+
+    &__person {
+        display: flex;
+
+        img {
+            display: block;
+            flex: 0 0 48px;
+            height: 48px;
+            margin-right: 12px;
+        }
+    }
+
+    &__person-info {
+        flex: 1 1 auto;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+        color: #05142D;
+
+        p:not(:last-child) {
+            margin-bottom: 9px;
+        }
+
+    }
+
+    &__stars {
+        margin: 20px 0 15px;
+        line-height: 0.7;
+
+        @media (max-width: 450px) {
+            margin: 15px 0 5px;
+        }
+    }
+
+    &__person-age {
+        font-size: 10px;
+        line-height: 13px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #01152F;
+
+        span {
+            line-height: 20px;
+        }
+    }
+
+    &__review {
+        margin-top: 11px;
+        font-size: 14px;
+        line-height: 22px;
+        color: #01152F;
+    }
+
+    &__bottom {}
+}
+
+.reviews-card-bottom {
+    margin-top: 23px;
+    border-radius: 10px;
+    border: 1px solid $darkBlue;
+    display: flex;
+
+    font-size: 10px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #01152F;
+
+    &__skinGoals {
+        flex: 0 0 87px;
+        padding: 9px 20px;
+        border-right: 1px solid $darkBlue;
+
+        @media (max-width: 450px) {
+            flex: 0 0 60px;
+            padding: 9px 10px;
+        }
+    }
+
+    &__description {
+        flex: 1 1 auto;
+        padding: 9px 9px;
+    }
+}
